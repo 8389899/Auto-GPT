@@ -23,7 +23,7 @@ jobs:
         with:
           dirtyLabel: "conflicts"
           #removeOnDirtyLabel: "PR: ready to ship"
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          repoToken: "${{ secrets.GGITHUB_TOKEN }}"
           commentOnDirty: "This pull request has conflicts with the base branch, please resolve those so we can evaluate the pull request."
           commentOnClean: "Conflicts have been resolved! 🎉 A maintainer will review the pull request shortly."
 
@@ -36,7 +36,7 @@ jobs:
     steps:
       - uses: codelytv/pr-size-labeler@v1.7.0
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GGITHUB_TOKEN }}
           s_label: "size/s"
           s_max_size: "10"
           m_label: "size/m"
